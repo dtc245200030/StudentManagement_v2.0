@@ -25,3 +25,11 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
   -keyout nginx/ssl/key.pem \
   -out nginx/ssl/cert.pem \
   -subj "/CN=localhost"
+### 2. Khởi chạy tất cả container
+``` bash
+docker compose up -d --build
+### 3. Truy cập các dịch vụ
+- Website (Flask + Nginx SSL): https://localhost
+- Database Management (phpMyAdmin): http://localhost:8081
+- Monitoring & Logging (Grafana): http://localhost:3000 (User/Pass: admin/admin)
+- Prometheus Metrics: http://localhost:9090
