@@ -29,7 +29,18 @@ Hệ thống Quản lý Sinh viên được đóng gói hoàn chỉnh bằng **D
 
 ## 🚀 Hướng Dẫn Khởi Chạy Hệ Thống
 
-### 1. Khởi tạo chứng chỉ SSL
+### 1. Kéo mã nguồn từ GitHub
+
+Mở terminal và thực hiện clone dự án về máy:
+
+```bash
+# Clone repository từ GitHub
+git clone https://github.com/dtc245200030/StudentManagement_v2.0.git
+
+# Di chuyển vào thư mục dự án
+cd student-management-system
+```
+### 2. Khởi tạo chứng chỉ SSL
 
 Tạo thư mục lưu trữ và khởi tạo chứng chỉ Self-signed SSL cho Nginx:
 
@@ -41,7 +52,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
   -subj "/CN=localhost"
 ```
 
-### 2. Khởi chạy tất cả Container
+### 3. Khởi chạy tất cả Container
 
 ```bash
 docker compose up -d --build
